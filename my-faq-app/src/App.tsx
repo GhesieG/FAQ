@@ -5,33 +5,39 @@ import './App.css';
 
 
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function TextExample() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+   
+    <div className="centered-container">
+       <Card style={{ width: '70rem' }}></Card>
+      <Card className="center-card text-center">
+      <Card.Body>
+        <Card.Title style={{ fontWeight: 'normal' }}>Frequent Questions</Card.Title>
+        
+        <Card.Text>
+          Simple answers to your most common questions
+        </Card.Text>
+
+      <>
+      <div className="d-flex justify-content-between gap-2">
+        <Button variant ="success" className="custom-btn">
+
+          Getting started guide
+        </Button>
+        <Button variant ="primary" className="custom-btn">
+        
+          Email support
+        </Button>
+        </div>
+      </>
+      
+      </Card.Body>
+    </Card>
+    </div>
+  
+  );
 }
 
-export default App
+export default TextExample;
+
+
